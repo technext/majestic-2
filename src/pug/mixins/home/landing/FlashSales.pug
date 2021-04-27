@@ -1,0 +1,85 @@
+append variables
+  -
+    var testimonials= [
+      {
+        image:'flat-hill.png',
+        title:'Flat Hill Slingback',
+        prevPrice:'$200',
+        price:'$175',
+         
+      },
+      {
+        image:'blue-ring.png',
+        title:'Ocean Blue Ring',
+        prevPrice:'$200',
+        price:'$175',
+      },
+      {
+        image:'wallet.png',
+        title:'Brown Leathered Wallet',
+        prevPrice:'$200',
+        price:'$175',
+      },
+      {
+        image:'wrist-watch.png',
+        title:'Silverside Wristwatch',
+        prevPrice:'$200',
+        price:'$175',
+      },
+      
+    ];
+
+
+mixin Items(config)
+  .col-md-3.mb-3.mb-md-0.h-100
+    .card.card-span.h-100.text-white
+      img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+      .card-img-overlay.ps-0    
+      .card-body.ps-0.bg-200 
+        h5.fw-bold.text-1000.text-truncate=config.title 
+        .fw-bold
+          span.text-600.me-2.text-decoration-line-through=config.prevPrice
+          span.text-primary=config.price
+      a.stretched-link(href='#')
+mixin FlashSales
+  section#testimonial
+    .container
+      .row.h-100
+        .col-lg-7.mx-auto.text-center.mb-6
+          h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3 Flash Sales
+        .col-12
+          #carouselTestimonials.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.align-items-center.g-2                
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])                                                                    
+                  +Items(testimonials[3])                                                                    
+              .carousel-item(data-bs-interval='5000')
+                .row.h-100.align-items-center.g-2                
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])
+                  +Items(testimonials[3])                     
+              .carousel-item(data-bs-interval='3000')
+                .row.h-100.align-items-center.g-2                                  
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])
+                  +Items(testimonials[3])                       
+              .carousel-item
+                .row.h-100.align-items-center.g-2          
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2]) 
+                  +Items(testimonials[3])   
+              .row
+                button.carousel-control-prev(type='button' data-bs-target='#carouselTestimonials' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouselTestimonials' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next 
+        .col-12.d-flex.justify-content-center.mt-5                                            
+          a.btn.btn-lg.btn-dark View All   

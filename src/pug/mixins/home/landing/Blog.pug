@@ -1,0 +1,77 @@
+append variables
+  -
+    var blogs= [
+      {
+        image:'blog-1.png',
+        time:'5 min Read',
+        title:'10 ways to pack before a solo trip',
+        text:'As we all know our travels are not always with other people. Sometimes we have to travel for our...', 
+      },
+      {
+        image:'blog-2.png',
+        time:'5 min Read',
+        title:'10 ways to pack before a solo trip',
+        text:'How fascinating is history to you? If the answer is “Yes!”, then imagine yourself on the roads of a city ce...',
+      },
+      {
+        image:'blog-3.png',
+        time:'5 min Read',
+        title:'Looking for a good place?',
+        text:'Hotels are a chore to choose when it comes to travelling. Nobody wants to look for a decent place...',
+      },
+      
+    ];
+
+mixin BlogItems(config)
+   .col-md-4.mb-3.mb-md-0
+    .card.card-span.h-100.text-white
+      img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+      .card-img-overlay.d-flex.flex-coloumn.flex-center
+      .card-body.px-3.py-4
+        h5.fw-bold.text-1000=config.title 
+        p.text-900=config.text
+      a.stretched-link(href='#!')  
+
+mixin TravelBlogs
+  +Section
+    .row.h-100
+      .col-lg-7.mx-auto.text-center.mb-6
+        h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3 Travel Blogs
+      .col-12
+        #carouselBlogs.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner.pb-sm-5
+            .carousel-item.active(data-bs-interval='10000')
+              .row.h-100.align-items-center.g-2                
+                +BlogItems(blogs[0])                                                                    
+                +BlogItems(blogs[1])                                                                    
+                +BlogItems(blogs[2])                                                                    
+            .carousel-item(data-bs-interval='5000')
+              .row.h-100.align-items-center.g-2                
+                +BlogItems(blogs[0])                                                                    
+                +BlogItems(blogs[1])                                                                    
+                +BlogItems(blogs[2])                      
+            .carousel-item(data-bs-interval='3000')
+              .row.h-100.align-items-center.g-2                                  
+                +BlogItems(blogs[0])                                                                    
+                +BlogItems(blogs[1])                                                                    
+                +BlogItems(blogs[2])                       
+            .carousel-item
+              .row.h-100.align-items-center.g-2         
+                +BlogItems(blogs[0])                                                                    
+                +BlogItems(blogs[1])                                                                    
+                +BlogItems(blogs[2])    
+            .row
+              button.carousel-control-prev(type='button' data-bs-target='#carouselBlogs' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+              button.carousel-control-next(type='button' data-bs-target='#carouselBlogs' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next                                    
+          .row.flex-center
+            .col-auto.position-relative.z-index-2
+              ol.carousel-indicators.me-xxl-7.me-xl-4.me-lg-7
+                li.active(data-bs-target='#carouselBlogs' data-bs-slide-to='0')
+                li(data-bs-target='#carouselBlogs' data-bs-slide-to='1')
+                li(data-bs-target='#carouselBlogs' data-bs-slide-to='2')
+                li(data-bs-target='#carouselBlogs' data-bs-slide-to='3')
+
