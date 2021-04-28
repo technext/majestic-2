@@ -1,3 +1,35 @@
+append variables
+  -
+    var collections= [
+      {
+        image:'outfit.png',
+        title:'Outfit',
+      },
+      {
+        image:'vanity-bag.png',
+        title:'Vanity Bags',
+      },
+      {
+        image:'hat.png',
+        title:'Hats',
+      },
+      {
+        image:'high-heels.png',
+        title:'High Heels',
+      },
+      
+    ];
+
+mixin CollectionItem(config)
+  .card.card-span.h-100.text-white
+    img.card-img(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+    .card-img-overlay.bg-dark-gradient
+      .d-flex.align-items-end.justify-content-center.h-100
+        button.btn.btn-link.text-light.fs-1(type='button')=config.title
+          svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')     
+    a.stretched-link(href='#!')
+
 mixin EverydayCollection
   +Section 
     .row.h-100.g-0 
@@ -9,27 +41,12 @@ mixin EverydayCollection
           .d-grid.gap-2.d-md-block
             a.btn.btn-lg.btn-dark(href='#' role='button') Explore
       .col-md-6
-        .card.card-span.h-100.text-white
-          img.img-fluid(src=`${CWD}assets/img/gallery/outfit.png` alt='...').h-100
-          .card-img-overlay
-            button.btn.btn-link(type='button') Link 
-              svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16')
-                path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')
-          a.stretched-link(href='#!')
+        +CollectionItem(collections[0])
 
     .row.h-100.g-2.py-1
       .col-md-4
-        .card.card-span.h-100.text-white
-          img.img-fluid(src=`${CWD}assets/img/gallery/vanity-bag.png` alt='...').h-100
-          .card-img-overlay  
-          a.stretched-link(href='#!')      
+        +CollectionItem(collections[1])
       .col-md-4
-        .card.card-span.h-100.text-white
-          img.img-fluid(src=`${CWD}assets/img/gallery/hat.png` alt='...').h-100
-          .card-img-overlay  
-          a.stretched-link(href='#!')  
+        +CollectionItem(collections[2])  
       .col-md-4
-        .card.card-span.h-100.text-white
-          img.img-fluid(src=`${CWD}assets/img/gallery/high-heels.png` alt='...').h-100
-          .card-img-overlay  
-          a.stretched-link(href='#!')          
+        +CollectionItem(collections[3])        

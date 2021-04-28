@@ -66,11 +66,15 @@
   opacity: 0.85;
 }
 
-.bg-dark-gradient {
-  background: linear-gradient(181deg, rgba(113, 110, 110, 0) 15%, rgba(30, 42, 70, 0.93) 72.07%);
+.bg-primary-gradient{
+  background: linear-gradient(208.18deg, #51B4F7 9.05%, #5A98F2 76.74%);
 }
 
-.bg-light-gradient{
-  background: linear-gradient(181deg, rgba(113, 110, 110, 0) 35%, rgba(30, 45, 70, 0.93) 94.07%);
+.bg-dark-gradient {
+  background: linear-gradient(0deg, rgba(33, 33, 33, 0.411) 0%, rgba(33, 33, 33, 0)100%);
 }
+
+// .bg-light-gradient{
+//   background: linear-gradient(181deg, rgba(113, 110, 110, 0) 35%, rgba(30, 45, 70, 0.93) 94.07%);
+// }
 
