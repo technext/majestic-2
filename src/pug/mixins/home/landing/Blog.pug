@@ -2,40 +2,69 @@ append variables
   -
     var blogs= [
       {
-        image:'blog-1.png',
+        image:'shoes-blog-1.png',
+        authorImage:'author-1.png',
+        name:'Kelly Hudson . <span class="fw-normal">Fashion actiKelly Hudson . <span class="fw-normal">Fashion activist </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
         time:'5 min Read',
-        title:'10 ways to pack before a solo trip',
-        text:'As we all know our travels are not always with other people. Sometimes we have to travel for our...', 
+        title:'What do your shoes say about you?',
+        text:'Can you really judge a person by their shoes? Well, nobody should judge, but yes it’s true that shoes do say a lot about a person. Shoes matter in making a first impression to the strangers we have to meet everyday...', 
       },
       {
-        image:'blog-2.png',
+        image:'fashion-blog-2.png',
+        authorImage:'author-2.png',
         time:'5 min Read',
-        title:'10 ways to pack before a solo trip',
-        text:'How fascinating is history to you? If the answer is “Yes!”, then imagine yourself on the roads of a city ce...',
+        name:'Rotondwa Johnny . <span class="fw-normal">Fashion activist </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
+        title:'Fashion Weekened to hit the theatres',
+        text:'A bangning catwalk show, an inspiring shoe exhibition, a nostalgic pop-up museum, and the finale of the Bata Young Designers’ Challange- our Fashion weekend 2021 at the historuc Zofin Palace in Pargue...',
       },
       {
-        image:'blog-3.png',
+        image:'spring-dress-blog-3.png',
+        authorImage:'author-3.png',
         time:'5 min Read',
-        title:'Looking for a good place?',
-        text:'Hotels are a chore to choose when it comes to travelling. Nobody wants to look for a decent place...',
+        name:'Martin . <span class="fw-normal">Fashion activist </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
+        title:'Spring dress try-on haul at the stores begins',
+        text:'Every spring I start going through dress withdrawals and get so excited for the bright colors and patterns of a new season! I ordered some of the prettiest spring dresses and wanted to share some of...',
       },
       
     ];
 
 mixin BlogItems(config)
-   .col-md-4.mb-3.mb-md-0
+  .col-md-4.mb-3.mb-md-0
     .card.card-span.h-100.text-white
-      img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
-      .card-img-overlay.d-flex.flex-coloumn.flex-center
-      .card-body.px-3.py-4
-        h5.fw-bold.text-1000=config.title 
-        p.text-900=config.text
-      a.stretched-link(href='#!')  
+      img.img-card(src=`${CWD}assets/img/gallery/${config.image}`  alt='...').h-100
+      .card-body.px-5.pt-0.pb-7
+        .d-flex.justify-content-between.align-items-center.bg-100.mt-n5.me-auto
+          img(src=`${CWD}assets/img/gallery/${config.authorImage}` alt='...')
+          span.text-900
+            i(data-feather='eye') 
+            span.text-900.ms-2=config.views
+          span.text-900
+            i(data-feather='heart') 
+            span.text-900.ms-2=config.like
+          span.text-900.me-4
+            i(data-feather='corner-up-right') 
+            span.text-900.ms-2=config.reply 
+        h6.text-900.mt-3!=config.name      
+        h3.fw-bold.text-1000.mt-5.text-truncate=config.title 
+        p.text-900.mt-3=config.text
+        a.btn.btn-lg.text-900.fs-1.px-0(href='#!' role='button') Read more
+          svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')  
 
 mixin Blog
-  +Section
-    .row.h-100
-      .col-lg-7.mx-auto.text-center.mb-6
-        h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3  Blog
-      .col-12
+  +Section.py-0.pb-8
+    .row.h-100.g-2
+      +BlogItems(blogs[0])
+      +BlogItems(blogs[1])
+      +BlogItems(blogs[2])
+      
        
