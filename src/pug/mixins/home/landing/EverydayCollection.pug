@@ -25,11 +25,10 @@ mixin CollectionItem(config)
     img.card-img(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
     .card-img-overlay.bg-dark-gradient
       .d-flex.align-items-end.justify-content-center.h-100
-        button.btn.btn-link.text-light.fs-1(type='button')=config.title
+        a.btn.btn-lg.text-light.fs-1(href='#!' role='button')=config.title
           svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' viewBox='0 0 16 16')
             path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')     
-    a.stretched-link(href='#!')
-
+ 
 mixin EverydayCollection
   +Section 
     .row.h-100.g-0 

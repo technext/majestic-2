@@ -18358,6 +18358,18 @@ ul {
   transform: translate3d(-50%, -50%, 0);
 }
 
+.card-img,
+.card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .input-group-icon {
   position: relative;
 }
