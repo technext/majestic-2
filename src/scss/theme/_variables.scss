@@ -213,8 +213,11 @@ $body-color: $gray-900 !default;
 //*-----------------------------------------------
 //|   Link
 //-----------------------------------------------*/
+// Style anchor elements.
+
+$link-color:                              $gray-1000 !default;
 $link-decoration: none !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 //*-----------------------------------------------
 //|   Components

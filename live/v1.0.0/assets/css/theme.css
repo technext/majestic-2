@@ -218,13 +218,13 @@ sup {
 }
 
 a {
-  color: #FFA15C;
+  color: #212121;
   text-decoration: none;
 }
 
 a:hover {
-  color: #cc814a;
-  text-decoration: underline;
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3480,7 +3480,6 @@ textarea.form-control-lg {
 
 .btn:hover {
   color: #424242;
-  text-decoration: none;
 }
 
 .btn-check:focus + .btn, .btn:focus {
@@ -4097,17 +4096,17 @@ fieldset:disabled .btn {
 
 .btn-link {
   font-weight: 400;
-  color: #FFA15C;
+  color: #212121;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  color: #cc814a;
-  text-decoration: underline;
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
 .btn-link:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:disabled, .btn-link.disabled {
@@ -4430,7 +4429,6 @@ fieldset:disabled .btn {
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: #3b3b3b;
-  text-decoration: none;
   background-color: #F5F5F5;
 }
 
@@ -4653,10 +4651,6 @@ fieldset:disabled .btn {
   }
 }
 
-.nav-link:hover, .nav-link:focus {
-  text-decoration: none;
-}
-
 .nav-link.disabled {
   color: #9E9E9E;
   pointer-events: none;
@@ -4788,10 +4782,6 @@ fieldset:disabled .btn {
   .navbar-brand {
     font-size: 1.728rem;
   }
-}
-
-.navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none;
 }
 
 .navbar-nav {
@@ -5413,7 +5403,7 @@ fieldset:disabled .btn {
 .page-link {
   position: relative;
   display: block;
-  color: #FFA15C;
+  color: #212121;
   background-color: #FFFEFE;
   border: 1px solid #EEEEEE;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -5433,15 +5423,14 @@ fieldset:disabled .btn {
 
 .page-link:hover {
   z-index: 2;
-  color: #cc814a;
-  text-decoration: none;
+  color: #1a1a1a;
   background-color: #F5F5F5;
   border-color: #EEEEEE;
 }
 
 .page-link:focus {
   z-index: 3;
-  color: #cc814a;
+  color: #1a1a1a;
   background-color: #F5F5F5;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 161, 92, 0.25);
@@ -17502,6 +17491,10 @@ ul {
 
 .bg-holder.overlay-2:before {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.bg-holder.overlay-light:before {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .bg-holder .bg-video {
