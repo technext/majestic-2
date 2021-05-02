@@ -38,21 +38,22 @@ append variables
     ];
 
 mixin BlogItems(config)
-  .col-md-4.mb-3.mb-md-0
-    .card.card-span.h-100.text-white
+  .col-md-4.mb-3.mb-md-0.h-100
+    .card.card-span.text-white.h-100
       img.img-card(src=`${CWD}assets/img/gallery/${config.image}`  alt='...').h-100
-      .card-body.px-5.pt-0.pb-7
+      .card-body.px-xl-5.px-md-3.pt-0.pb-7
         .d-flex.justify-content-between.align-items-center.bg-100.mt-n5.me-auto
           img(src=`${CWD}assets/img/gallery/${config.authorImage}` alt='...')
-          span.text-900
-            i(data-feather='eye') 
-            span.text-900.ms-2=config.views
-          span.text-900
-            i(data-feather='heart') 
-            span.text-900.ms-2=config.like
-          span.text-900.me-4
-            i(data-feather='corner-up-right') 
-            span.text-900.ms-2=config.reply 
+          .d-flex.flex-1.justify-content-around 
+            span.text-900
+              i(data-feather='eye') 
+              span.text-900.ms-2=config.views
+            span.text-900
+              i(data-feather='heart') 
+              span.text-900.ms-2=config.like
+            span.text-900
+              i(data-feather='corner-up-right') 
+              span.text-900.ms-2=config.reply 
         h6.text-900.mt-3!=config.name      
         h3.fw-bold.text-1000.mt-5.text-truncate=config.title 
         p.text-900.mt-3=config.text
@@ -61,8 +62,8 @@ mixin BlogItems(config)
             path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')  
 
 mixin Blog
-  +Section.py-0.pb-8
-    .row.h-100.g-2
+  +Section('container').py-0.pb-8
+    .row.h-100.g-2.justify-content-center
       +BlogItems(blogs[0])
       +BlogItems(blogs[1])
       +BlogItems(blogs[2])
