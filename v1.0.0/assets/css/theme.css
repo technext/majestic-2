@@ -4682,7 +4682,7 @@ fieldset:disabled .btn {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #FE7A15;
+  color: #757575;
   background-color: #F5F5F5;
   border-color: transparent;
 }
@@ -18420,22 +18420,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   backdrop-filter: blur(4px);
 }
 
-.voyage-tabs {
+.majestic-tabs {
   border-bottom: 0;
 }
 
-.voyage-tabs .nav-link {
+.majestic-tabs .nav-link {
   border: 2px solid transparent;
   color: #616161;
 }
 
-.voyage-tabs .nav-link:hover, .voyage-tabs .nav-link:focus {
+.majestic-tabs .nav-link:hover, .majestic-tabs .nav-link:focus {
   border-color: transparent;
 }
 
-.voyage-tabs .nav-link.active,
-.voyage-tabs .nav-item.show .nav-link {
-  border-bottom-color: #FE7A15;
+.majestic-tabs .nav-link.active,
+.majestic-tabs .nav-item.show .nav-link {
+  border-bottom-color: #757575;
 }
 
 /*-----------------------------------------------
