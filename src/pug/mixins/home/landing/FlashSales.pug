@@ -1,6 +1,6 @@
 append variables
   -
-    var testimonials= [
+    var flashSales= [
       {
         image:'flat-hill.png',
         title:'Flat Hill Slingback',
@@ -30,8 +30,8 @@ append variables
     ];
 
 
-mixin Items(config)
-  .col-md-3.mb-3.mb-md-0.h-100
+mixin FlashItems(config)
+  .col-sm-6.col-md-3.mb-3.mb-md-0.h-100
     .card.card-span.h-100.text-white
       img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
       .card-img-overlay.ps-0    
@@ -41,43 +41,44 @@ mixin Items(config)
           span.text-600.me-2.text-decoration-line-through=config.prevPrice
           span.text-primary=config.price
       a.stretched-link(href='#')
+      
 mixin FlashSales
   +Section.py-0
     .row.h-100
       .col-lg-7.mx-auto.text-center.mt-7.mb-5
         h5.fw-bold.fs-3.fs-lg-5.lh-sm Flash Sales
       .col-12
-        #carouselTestimonials.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+        #carouselFlashSales.carousel.slide(data-bs-touch="false" data-bs-interval="false")
           .carousel-inner
             .carousel-item.active(data-bs-interval='10000')
               .row.h-100.align-items-center.g-2                
-                +Items(testimonials[0])                                                                    
-                +Items(testimonials[1])                                                                    
-                +Items(testimonials[2])                                                                    
-                +Items(testimonials[3])                                                                    
+                +FlashItems(flashSales[0])                                                                    
+                +FlashItems(flashSales[1])                                                                    
+                +FlashItems(flashSales[2])                                                                    
+                +FlashItems(flashSales[3])                                                                    
             .carousel-item(data-bs-interval='5000')
               .row.h-100.align-items-center.g-2                
-                +Items(testimonials[0])                                                                    
-                +Items(testimonials[1])                                                                    
-                +Items(testimonials[2])
-                +Items(testimonials[3])                     
+                +FlashItems(flashSales[0])                                                                    
+                +FlashItems(flashSales[1])                                                                    
+                +FlashItems(flashSales[2])
+                +FlashItems(flashSales[3])                     
             .carousel-item(data-bs-interval='3000')
               .row.h-100.align-items-center.g-2                                  
-                +Items(testimonials[0])                                                                    
-                +Items(testimonials[1])                                                                    
-                +Items(testimonials[2])
-                +Items(testimonials[3])                       
+                +FlashItems(flashSales[0])                                                                    
+                +FlashItems(flashSales[1])                                                                    
+                +FlashItems(flashSales[2])
+                +FlashItems(flashSales[3])                       
             .carousel-item
               .row.h-100.align-items-center.g-2          
-                +Items(testimonials[0])                                                                    
-                +Items(testimonials[1])                                                                    
-                +Items(testimonials[2]) 
-                +Items(testimonials[3])   
+                +FlashItems(flashSales[0])                                                                    
+                +FlashItems(flashSales[1])                                                                    
+                +FlashItems(flashSales[2]) 
+                +FlashItems(flashSales[3])   
             .row
-              button.carousel-control-prev(type='button' data-bs-target='#carouselTestimonials' data-bs-slide='prev')
+              button.carousel-control-prev(type='button' data-bs-target='#carouselFlashSales' data-bs-slide='prev')
                 span.carousel-control-prev-icon(aria-hidden='true')
                 span.visually-hidden Previous
-              button.carousel-control-next(type='button' data-bs-target='#carouselTestimonials' data-bs-slide='next')
+              button.carousel-control-next(type='button' data-bs-target='#carouselFlashSales' data-bs-slide='next')
                 span.carousel-control-next-icon(aria-hidden='true')
                 span.visually-hidden Next 
       .col-12.d-flex.justify-content-center.mt-5                                            

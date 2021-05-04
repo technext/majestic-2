@@ -3,11 +3,11 @@ mixin HeroHeader
     +Background({ image: `${CWD}assets/img/gallery/header-bg.png`, attrs: { style: {'background-size':'cover'} }, className: 'overlay overlay-light' })
     .container 
       .row.flex-center
-        .col-12
+        .col-12.mb-10
           .d-flex.align-items-center.flex-column
             h1.fw-normal  Just dropped &amp; never seen before
-            h1.display-1.lh-lg.fw-bold Designed specially for you
-  +Section.py-0.mt-n11
+            h1.fs-4.fs-lg-8.fs-md-6.fw-bold Designed specially for you
+  +Section.py-0#header(style='margin-top: -23rem !important;')
     .row.g-0 
       .col-md-6   
         .card.card-span.h-100.text-white  
