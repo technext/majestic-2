@@ -310,7 +310,6 @@ var navbarInit = function navbarInit() {
 
       alpha >= 1 && (alpha = 0.75);
       navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
-      console.log(navbar.style.backgroundColor);
       navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'none';
       alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
     }); // Toggle bg class on window resize

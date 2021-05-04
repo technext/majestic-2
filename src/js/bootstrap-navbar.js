@@ -60,7 +60,6 @@ const navbarInit = () =>{
       }
       alpha >= 1 && (alpha = 0.75);
       navbar.style.backgroundColor = `rgba(${colorRgb[0]}, ${colorRgb[1]}, ${colorRgb[2]}, ${alpha})`;
-      console.log(navbar.style.backgroundColor);
       navbar.style.backgroundImage = (alpha > 0 || utils.hasClass(navbarCollapse, 'show')) ? backgroundImage : 'none';
       (alpha > 0 || utils.hasClass(navbarCollapse, 'show')) ? navbar.classList.add(shadowName):navbar.classList.remove(shadowName);
     });
