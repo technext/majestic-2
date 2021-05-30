@@ -1,6 +1,6 @@
 append variables
   -
-    var flashSales= [
+    var bestdeals= [
       {
         image:'flat-hill.png',
         title:'Flat Hill Slingback',
@@ -42,43 +42,43 @@ mixin FlashItems(config)
           span.text-primary=config.price
       a.stretched-link(href='#')
       
-mixin FlashSales
+mixin BestDeals
   +Section.py-0
     .row.h-100
       .col-lg-7.mx-auto.text-center.mt-7.mb-5
-        h5.fw-bold.fs-3.fs-lg-5.lh-sm Flash Sales
+        h5.fw-bold.fs-3.fs-lg-5.lh-sm Best Deals
       .col-12
-        #carouselFlashSales.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+        #carouselBestDeals.carousel.slide(data-bs-touch="false" data-bs-interval="false")
           .carousel-inner
             .carousel-item.active(data-bs-interval='10000')
               .row.h-100.align-items-center.g-2                
-                +FlashItems(flashSales[0])                                                                    
-                +FlashItems(flashSales[1])                                                                    
-                +FlashItems(flashSales[2])                                                                    
-                +FlashItems(flashSales[3])                                                                    
+                +FlashItems(bestdeals[0])                                                                    
+                +FlashItems(bestdeals[1])                                                                    
+                +FlashItems(bestdeals[2])                                                                    
+                +FlashItems(bestdeals[3])                                                                    
             .carousel-item(data-bs-interval='5000')
               .row.h-100.align-items-center.g-2                
-                +FlashItems(flashSales[0])                                                                    
-                +FlashItems(flashSales[1])                                                                    
-                +FlashItems(flashSales[2])
-                +FlashItems(flashSales[3])                     
+                +FlashItems(bestdeals[0])                                                                    
+                +FlashItems(bestdeals[1])                                                                    
+                +FlashItems(bestdeals[2])
+                +FlashItems(bestdeals[3])                     
             .carousel-item(data-bs-interval='3000')
               .row.h-100.align-items-center.g-2                                  
-                +FlashItems(flashSales[0])                                                                    
-                +FlashItems(flashSales[1])                                                                    
-                +FlashItems(flashSales[2])
-                +FlashItems(flashSales[3])                       
+                +FlashItems(bestdeals[0])                                                                    
+                +FlashItems(bestdeals[1])                                                                    
+                +FlashItems(bestdeals[2])
+                +FlashItems(bestdeals[3])                       
             .carousel-item
               .row.h-100.align-items-center.g-2          
-                +FlashItems(flashSales[0])                                                                    
-                +FlashItems(flashSales[1])                                                                    
-                +FlashItems(flashSales[2]) 
-                +FlashItems(flashSales[3])   
+                +FlashItems(bestdeals[0])                                                                    
+                +FlashItems(bestdeals[1])                                                                    
+                +FlashItems(bestdeals[2]) 
+                +FlashItems(bestdeals[3])   
             .row
-              button.carousel-control-prev(type='button' data-bs-target='#carouselFlashSales' data-bs-slide='prev')
+              button.carousel-control-prev(type='button' data-bs-target='#carouselBestDeals' data-bs-slide='prev')
                 span.carousel-control-prev-icon(aria-hidden='true')
                 span.visually-hidden Previous
-              button.carousel-control-next(type='button' data-bs-target='#carouselFlashSales' data-bs-slide='next')
+              button.carousel-control-next(type='button' data-bs-target='#carouselBestDeals' data-bs-slide='next')
                 span.carousel-control-next-icon(aria-hidden='true')
                 span.visually-hidden Next 
       .col-12.d-flex.justify-content-center.mt-5                                            
